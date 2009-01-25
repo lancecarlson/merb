@@ -16,11 +16,11 @@ namespace :db do
   end
   desc "Perform automigration"
   task :automigrate => :merb_env do
-    ::DataMapper::AutoMigrator.auto_migrate
+    ::DataMapper::AutoMigrator.auto_migrate!
   end
   desc "Perform non destructive automigration"
   task :autoupgrade => :merb_env do
-    ::DataMapper::AutoMigrator.auto_upgrade
+    ::DataMapper::AutoMigrator.auto_upgrade!
   end
 
   namespace :migrate do
